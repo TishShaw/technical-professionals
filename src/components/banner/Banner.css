@@ -1,0 +1,16 @@
+.banner {
+    background-color: black;
+    height: 250px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://cutewallpaper.org/21/technology-background-black/Animated-Lines-Technology-Background-Stock-Footage-Video-100-Royalty-free-19947742-Shutterstock.jpg");
+    background-position: center;
+    background-repeat: none;
+}
+
+.banner-title {
+    font-size: 30px;
+    font-weight: bold;
+}

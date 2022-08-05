@@ -1,0 +1,57 @@
+.navbar {
+    background-color: black;
+    color: white;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    justify-content: space-around;
+}
+
+.navbar-title {
+    font-size: 30px;
+}
+
+.navbar-title span {
+    color: Red;
+}
+
+.navbar-list {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+
+}
+
+.navbar-list .navbar-listItems {
+    margin-right: 30px;
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+
+}
+
+.navbar-list .navbar-listItems:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.navbar-listItems:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-listItems:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
