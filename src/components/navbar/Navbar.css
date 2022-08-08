@@ -12,6 +12,9 @@
 
 .navbar-title {
     font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-title span {
@@ -54,4 +57,8 @@
 .navbar-listItems:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.logoImg {
+    width: 100px;
 }
