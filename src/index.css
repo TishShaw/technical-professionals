@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -46,7 +50,37 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&family=Oleo+Script+Swash+Caps&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700&family=Rowdies:wght@400;700&family=Tourney&display=swap');
 
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Raleway', sans-serif;
+}
+
+.contactBanner {
+	background-image: url('');
+}
+
+
+.box[data-expanded="true"]:hover {
+  width: 350px;
+  height: 350px;
+  border-radius: 8px;
+}
+
+.contactInput {
+	border: 1px solid gray;
+	height:50px;
+	margin: 0px 20px;
+	outline: none;
+}
+
+.contactInput:focus {
+	border-bottom: 2px solid red;
+	padding-left: 5px;
+}
+
+.contactLabel {
+	margin:  22px 20px 12px 20px;
 }

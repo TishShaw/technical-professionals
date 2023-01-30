@@ -7,15 +7,15 @@
     display: flex;
     align-items: center;
     z-index: 1000;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
+/* 
 .navbar-title {
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .navbar-title span {
     color: Red;
@@ -30,7 +30,7 @@
 
 .navbar-list .navbar-listItems {
     margin-right: 30px;
-    font-size: 25px;
+    font-size: 12px;
     display: inline-block;
     position: relative;
 
@@ -42,23 +42,25 @@
 }
 
 .navbar-listItems:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: red;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
 .navbar-listItems:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .logoImg {
-    width: 100px;
+    width: 150px;
+    margin-left: 20px;
+    margin-top: 22px;
 }

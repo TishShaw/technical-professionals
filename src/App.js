@@ -1,20 +1,27 @@
+import {Routes, Route} from 'react-router-dom';
 import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/hero/Hero";
 import "./App.css";
-import Banner from "./components/banner/Banner";
-import Services from "./components/services/Services";
 import Footer from "./components/footer/Footer";
+import HomeScreen from './screens/HomeScreen';
+import ServicesScreen from './screens/ServicesScreen';
+import AboutScreen from './screens/AboutScreen';
+import ContactScreen from './screens/ContactScreen';
+import LoginScreen from './screens/LoginScreen';
 
 function App() {
-  return (
-    <div className="App">
-      <Navbar/>
-      <Hero/>
-      <Banner/>
-      <Services/>
-      <Footer/>
-    </div>
-  );
+    return (
+		<div className='w-full h-full overflow-hidden'>
+			<Navbar />
+			<Routes>
+				<Route path='/' element={<HomeScreen/>} />
+				<Route path='/services' element={<ServicesScreen/>} />
+				<Route path='/about-us' element={<AboutScreen/>} />
+				<Route path='/contact-us' element={<ContactScreen />} />
+				<Route path='/login' element={<LoginScreen/>} />
+			</Routes>
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
