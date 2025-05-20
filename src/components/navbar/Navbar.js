@@ -4,7 +4,7 @@ import {BsTelephoneFill} from 'react-icons/bs';
 import {VscChromeClose} from 'react-icons/vsc';
 import { Link, useParams } from 'react-router-dom';
 import Tabs from '../Tabs';
-import LOGO from '../../images/logo-white.png';
+import LOGO from '../../images/fulllogo_transparent.png';
 import './Navbar.css';
 
 const Navbar = () => {

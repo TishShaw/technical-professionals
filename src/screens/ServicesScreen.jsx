@@ -1,77 +1,52 @@
-import React, {useRef, useState} from 'react';
+import React from "react";
 import { motion } from "framer-motion";
+import { FaTv, FaBroadcastTower, FaCamera, FaNetworkWired, FaTools, FaMicrophone } from "react-icons/fa";
+
+const services = [
+  { title: "Audio-Visual Integration", icon: <FaTv />, description: "Seamless AV solutions for conference rooms, auditoriums, and events." },
+  { title: "Live Event Production", icon: <FaBroadcastTower />, description: "High-quality live event streaming and production services." },
+  { title: "Security & Surveillance", icon: <FaCamera />, description: "Advanced CCTV and security system installations for businesses." },
+  { title: "Network Solutions", icon: <FaNetworkWired />, description: "Structured cabling and IT network setup for seamless connectivity." },
+  { title: "Equipment Maintenance", icon: <FaTools />, description: "Professional repair and maintenance for AV and networking systems." },
+  { title: "Pro Audio Systems", icon: <FaMicrophone />, description: "Custom audio installations for businesses, churches, and entertainment venues." },
+];
 
 const ServicesScreen = () => {
-    const ref = useRef(null);
-    const [expanded, setExpanded] = useState(true);
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center px-6 py-16">
+      <motion.h1
+        className="text-4xl font-bold text-gray-800 mb-6"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Our Services
+      </motion.h1>
+      <p className="text-lg text-gray-700 text-center mb-12 max-w-2xl">
+        At **Technical Professionals, LLC**, we provide top-tier **Audio-Visual and Networking solutions** tailored to meet your business needs.
+      </p>
 
-    return (
-        <div className='h-screen w-full'>
-            <div className="flex justify-center items-start  mt-10">
-                <div className="">
-                    
-                        <div className="flex justify-center items-center relative">
-                            <motion.div
-                                className=" absolute box border-4 border-red-500 border-solid	 rounded-full w-[100px] h-[100px]"
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{
-                                    duration: 0.8,
-                                    delay: 0.5,
-                                    ease: [0, 0.71, 0.2, 1.01]
-                                }}
-                                />
-                                <motion.div
-                                className="box border-8 border-red-500 border-solid	 rounded-full w-[250px] h-[250px]"
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{
-                                    duration: 0.8,
-                                    delay: 0.5,
-                                    ease: [0, 0.71, 0.2, 1.01]
-                                }}
-                                />
-                                <h1 className='font-bold text-5xl text-center absolute top-20 mt-6'>Services</h1>
-                        </div>
-                    
-                        <motion.div
-                        animate={{
-                            rotate: 360,
-                            borderRadius: [ "50% 50%", "2% 50%"],
-                            x: 75
-                        }}
-                        initial={{
-                            x: -75
-                        }}
-                        transition={{
-                            flip: Infinity,
-                            duration: 2,
-                            ease: "easeInOut",
-                            repeat:'infinity'
-                        }}className="flex">
-                            <motion.div className="border-red-400 border-8 border-solid rounded-full h-[250px] w-[250px] flex items-center justify-center box" data-expanded={expanded}>
-                                <h1>Structured Cabeling</h1>
-                            </motion.div>
-                            <div className="border-red-400 border-8 border-solid rounded-full h-[250px] w-[250px] flex items-center justify-center">
-                                <h1>Point of Sale</h1>
-                            </div>
-                            <div className="border-red-400 border-8 border-solid rounded-full h-[250px] w-[250px] flex items-center justify-center">
-                                <h1>Security Cameras</h1>
-                            </div>
-                            <div className="border-red-400 border-8 border-solid rounded-full h-[250px] w-[250px] flex items-center justify-center">
-                                <h1>Kiosks</h1>
-                            </div>
-                            <div className="border-red-400 border-8 border-solid rounded-full h-[250px] w-[250px] flex items-center justify-center">
-                                <h1>Networks</h1>
-                            </div>
-                    
-                        </motion.div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    );
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+          >
+            <div className="text-red-500 text-5xl mb-4">{service.icon}</div>
+            <h2 className="text-xl font-semibold text-gray-800">{service.title}</h2>
+            <p className="text-gray-600 mt-2">{service.description}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  );
 };
 
 export default ServicesScreen;
+

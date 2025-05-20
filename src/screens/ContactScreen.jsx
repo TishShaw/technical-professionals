@@ -1,49 +1,42 @@
-import React from 'react';
-import {RiMapPin2Fill} from 'react-icons/ri';
-import {MdEmail} from 'react-icons/md';
-import {BsTelephoneFill} from 'react-icons/bs';
+import React from "react";
 
-const ContactScreen = () => {
-    return (
-        <div className='h-screen w-full'>
-            <div className='mt-8'>
-                <div className='flex items-center justify-center flex-col'>
-                    <h1 className='font-bold text-4xl text-center'>Contact Us</h1>
-                    <p className='mt-6 text-lg'>Let's get in touch. Send us a message:</p>
-                 </div>
-               
-                <div className='my-12 mx-6 space-y-6'>
-                    <div className='flex items-center'>
-                        <RiMapPin2Fill className='mr-4 text-3xl'/>
-                        <span> 8507 Oxon Hill Road Suite 301, Fort Washington, MD 20744</span>
-                    </div>
-                    <div className='flex items-center'>
-                        <BsTelephoneFill className='mr-4 text-3xl'/>
-                        <span>  Phone: 301-839-3335</span>
-                    </div>
-                    <div className='flex items-center'>
-                        <MdEmail className='mr-4 text-3xl'/>
-                        <span> Email: info@branchts.com</span>
-                    </div>
-                    
-                </div>
-                <form className='flex flex-col justify-center h-full'>
-
-                    <label className='contactLabel'>Full Name</label>
-                    <input type='text' className='contactInput'/>
-                    <label className='contactLabel'>Email</label>
-                    <input type='text' className='contactInput'/>
-                    <label className='contactLabel'>Topic</label>
-                    <input type='text' className='contactInput'/>
-                    <label className='contactLabel'>Subject</label>
-                    <input type='text' className='contactInput'/>
-                    <label className='contactLabel'>Body</label>
-                    <textarea rows="10" cols="50" type='text' className='contactInput'/>
-                    <button className='m-auto flex text-center items-center justify-center border border-solid border-red-500 w-[200px] bg-red-500 p-4 text-center mt-6'>Submit</button>
-                </form>
-            </div>
-        </div>
-    );
+const AboutPage = () => {
+  return (
+    <div className="max-w-3xl mx-auto p-6 text-center">
+      <h1 className="text-3xl font-bold mb-4">About Us</h1>
+      <p className="text-lg mb-2">
+        Welcome to <strong>Technical Professionals, LLC</strong>, where we are dedicated to
+        providing top-notch technology solutions tailored to your business needs.
+        Our team is committed to innovation, quality, and customer satisfaction.
+      </p>
+      <p className="text-lg mb-6">
+        At <strong>Technical Professionals, LLC</strong>, we believe in building strong
+        relationships with our clients by offering personalized solutions that drive
+        success.
+      </p>
+      
+      <h2 className="text-2xl font-semibold mb-3">Contact Us</h2>
+      <p className="text-lg"><strong>Technical Professionals, LLC</strong></p>
+      <p className="text-lg">5029 Columbia Road, Ste 302<br />Columbia, MD 21044</p>
+      <p className="text-lg">(443) 983-4541</p>
+      <p className="text-lg">
+        <a href="mailto:techprodivers@gmail.com" className="text-blue-500">techprodivers@gmail.com</a>
+      </p>
+      <p className="text-lg">
+        <a href="http://www.technical-professionalsllc.com" target="_blank" rel="noopener noreferrer" className="text-blue-500">
+          www.technical-professionalsllc.com
+        </a>
+      </p>
+      <p className="mt-4">We look forward to working with you! Feel free to call, email, or visit our website to learn more.</p>
+      
+      <form className="mt-6 flex flex-col gap-4 bg-gray-100 p-6 rounded-lg shadow-md">
+        <input type="text" name="name" placeholder="Your Name" required className="p-3 border border-gray-300 rounded" />
+        <input type="email" name="email" placeholder="Your Email" required className="p-3 border border-gray-300 rounded" />
+        <textarea name="message" rows="4" placeholder="Your Message" required className="p-3 border border-gray-300 rounded"></textarea>
+        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Send Message</button>
+      </form>
+    </div>
+  );
 };
 
-export default ContactScreen;
+export default AboutPage;
